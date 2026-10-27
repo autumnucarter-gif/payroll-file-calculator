@@ -19,10 +19,19 @@ public class Main {
                 String name = token[1];
                 double hoursWorked = Double.parseDouble(token[2]);
                 double payRate = Double.parseDouble(token[3]);
+                double grossPay = hoursWorked * payRate;
+
+                Employee employee = new Employee(employeeId, name, hoursWorked, payRate);
+
+                System.out.printf("%d: %s, %.2f, %.2f%n",
+                        employee.getEmployeeId(),employee.getName(),employee.getHoursWorked(),employee.getPayRate());
             }
+            bufferedReader.close();
+
         } catch (Exception problem) {
             System.out.println("Sorry, something went wrong!");
 
         }
+        System.out.println();
     }
 }
