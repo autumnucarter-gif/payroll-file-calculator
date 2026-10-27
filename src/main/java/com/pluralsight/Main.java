@@ -25,6 +25,7 @@ public class Main {
 
                 System.out.printf("%d: %s, %.2f, %.2f%n",
                         employee.getEmployeeId(),employee.getName(),employee.getHoursWorked(),employee.getPayRate());
+                System.out.println(name + " " + grossPay);
             }
             bufferedReader.close();
 
